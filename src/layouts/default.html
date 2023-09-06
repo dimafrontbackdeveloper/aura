@@ -5,13 +5,103 @@
     {{> head }}
 </head>
 
-<body>
+<body class='scroll-disabled'>
+    <div class="preloader">
+        <div class="pl">
+            <svg class="pl__rings" viewBox="0 0 128 128" width="128px" height="128px">
+                <g fill="none" stroke-linecap="round" stroke-width="4">
+                    <g class="pl__ring" transform="rotate(0)">
+                        <ellipse class="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsla(223,90%,50%,0.3)" />
+                        <ellipse class="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsla(223,90%,50%,0.5)"
+                            stroke-dasharray="50 240" />
+                        <ellipse class="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsl(223,90%,50%)"
+                            stroke-dasharray="25 265" />
+                    </g>
+                    <g class="pl__ring" transform="rotate(0)">
+                        <ellipse class="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsla(223,90%,50%,0)" />
+                        <ellipse class="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsla(223,90%,50%,0.5)"
+                            stroke-dasharray="50 240" />
+                        <ellipse class="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsl(223,90%,50%)"
+                            stroke-dasharray="25 265" />
+                    </g>
+                    <g class="pl__ring" transform="rotate(0)">
+                        <ellipse class="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsla(223,90%,50%,0)" />
+                        <ellipse class="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsla(223,90%,50%,0.5)"
+                            stroke-dasharray="50 240" />
+                        <ellipse class="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsl(223,90%,50%)"
+                            stroke-dasharray="25 265" />
+                    </g>
+                    <g class="pl__ring" transform="rotate(0)">
+                        <ellipse class="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsla(223,90%,50%,0)" />
+                        <ellipse class="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsla(223,90%,50%,0.5)"
+                            stroke-dasharray="50 240" />
+                        <ellipse class="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsl(223,90%,50%)"
+                            stroke-dasharray="25 265" />
+                    </g>
+                    <g class="pl__ring" transform="rotate(180)">
+                        <ellipse class="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsla(223,90%,50%,0.3)" />
+                        <ellipse class="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsla(223,90%,50%,0.5)"
+                            stroke-dasharray="50 240" />
+                        <ellipse class="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsl(223,90%,50%)"
+                            stroke-dasharray="25 265" />
+                    </g>
+                    <g class="pl__ring" transform="rotate(180)">
+                        <ellipse class="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsla(223,90%,50%,0)" />
+                        <ellipse class="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsla(223,90%,50%,0.5)"
+                            stroke-dasharray="50 240" />
+                        <ellipse class="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsl(223,90%,50%)"
+                            stroke-dasharray="25 265" />
+                    </g>
+                    <g class="pl__ring" transform="rotate(0)">
+                        <ellipse class="pl__electron" cx="64" cy="64" rx="60" ry="30" stroke="hsl(0,0%,100%)"
+                            stroke-dasharray="1 289" stroke-width="8" />
+                        <ellipse class="pl__electron" cx="64" cy="64" rx="60" ry="30" stroke="hsl(0,0%,100%)"
+                            stroke-dasharray="1 289" stroke-width="8" />
+                    </g>
+                    <g class="pl__ring" transform="rotate(180)">
+                        <ellipse class="pl__electron" cx="64" cy="64" rx="60" ry="30" stroke="hsl(0,0%,100%)"
+                            stroke-dasharray="1 289" stroke-width="8" />
+                        <ellipse class="pl__electron" cx="64" cy="64" rx="60" ry="30" stroke="hsl(0,0%,100%)"
+                            stroke-dasharray="1 289" stroke-width="8" />
+                        <ellipse class="pl__electron" cx="64" cy="64" rx="60" ry="30" stroke="hsl(0,0%,100%)"
+                            stroke-dasharray="1 289" stroke-width="8" />
+                        <ellipse class="pl__electron" cx="64" cy="64" rx="60" ry="30" stroke="hsl(0,0%,100%)"
+                            stroke-dasharray="1 289" stroke-width="8" />
+                    </g>
+                </g>
+            </svg>
+            <div class="pl__nucleus">
+                <div class="pl__nucleus-particle"></div>
+                <div class="pl__nucleus-particle"></div>
+                <div class="pl__nucleus-particle"></div>
+                <div class="pl__nucleus-particle"></div>
+                <div class="pl__nucleus-particle"></div>
+                <div class="pl__nucleus-particle"></div>
+                <div class="pl__nucleus-particle"></div>
+                <div class="pl__nucleus-particle"></div>
+                <div class="pl__nucleus-particle"></div>
+                <div class="pl__nucleus-particle"></div>
+                <div class="pl__nucleus-particle"></div>
+                <div class="pl__nucleus-particle"></div>
+                <div class="pl__nucleus-particle"></div>
+            </div>
+        </div>
+    </div>
     <div class="wrapper">
         {{> header }}
         <main class="content">{{> body }}</main>
         {{> footer }}
     </div>
 
+    <!-- smooth show blocks  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            disable: 'phone',
+            once: true,
+            delay: 100
+        });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> <!-- slider -->
     <script src="assets/js/app.js"></script>
 </body>

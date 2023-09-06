@@ -1,3 +1,8 @@
+import preloader from './preloader.js'
+import smoothScroll from './scrollSmooth.js'
+preloader()
+smoothScroll()
+
 // header allocate navigation on achieve a section
 const headerNavigationItemsDesktop = document.querySelectorAll(
 	'.header__navigation-item-desktop'
@@ -231,3 +236,5 @@ beAuthorFile.addEventListener('click', () => {
 	fileInput.click()
 	document.body.removeChild(fileInput)
 })
+
+// smooth scroll

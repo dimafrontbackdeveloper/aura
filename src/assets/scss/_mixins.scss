@@ -33,6 +33,11 @@ $maxWidthContainer: 1180;
 		}
 	} @else {
 		// Всегда
+
+		@media (min-width: 1921px) {
+			#{$property}: $startSize + px;
+		}
+
 		#{$property}: calc(
 			#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320})
 		);
@@ -73,13 +78,16 @@ $maxWidthContainer: 1180;
 			transition-delay: $duration * 2, $duration, 0s;
 		}
 	}
-	&:hover {
-		&:before {
-			background-size: 200% $width, $width 400%, $width 400%, 55% $width,
-				55% $width;
-			background-position: 50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
-			transform: scaleX(1) rotate(180deg * $direction);
-			transition-delay: 0s, $duration, $duration * 2;
+
+	@media (min-width: 768px) {
+		&:hover {
+			&:before {
+				background-size: 200% $width, $width 400%, $width 400%, 55% $width,
+					55% $width;
+				background-position: 50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
+				transform: scaleX(1) rotate(180deg * $direction);
+				transition-delay: 0s, $duration, $duration * 2;
+			}
 		}
 	}
 }

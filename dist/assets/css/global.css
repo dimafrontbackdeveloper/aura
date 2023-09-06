@@ -100,6 +100,24 @@ body {
 		);
 }
 
+.swiper-container {
+    overflow: hidden;
+}
+
+.text-cut-wrapper {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+}
+
+.text-cut-wrapper * {
+    white-space: nowrap;
+  /* Запрет переноса текста на новую строку */
+    overflow: hidden;
+  /* Скрытие избыточного текста, не влезающего в контейнер */
+    text-overflow: ellipsis;
+  /* Добавление многоточия в конец текста */
+}
+
 .btn {
     display: inline-block;
     padding: 25px 55px;

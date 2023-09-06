@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="assets/css/style.min.css">
     
@@ -16,7 +17,88 @@
     
     <title></title></head>
 
-<body>
+<body class='scroll-disabled'>
+    <div class="preloader">
+        <div class="pl">
+            <svg class="pl__rings" viewBox="0 0 128 128" width="128px" height="128px">
+                <g fill="none" stroke-linecap="round" stroke-width="4">
+                    <g class="pl__ring" transform="rotate(0)">
+                        <ellipse class="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsla(223,90%,50%,0.3)" />
+                        <ellipse class="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsla(223,90%,50%,0.5)"
+                            stroke-dasharray="50 240" />
+                        <ellipse class="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsl(223,90%,50%)"
+                            stroke-dasharray="25 265" />
+                    </g>
+                    <g class="pl__ring" transform="rotate(0)">
+                        <ellipse class="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsla(223,90%,50%,0)" />
+                        <ellipse class="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsla(223,90%,50%,0.5)"
+                            stroke-dasharray="50 240" />
+                        <ellipse class="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsl(223,90%,50%)"
+                            stroke-dasharray="25 265" />
+                    </g>
+                    <g class="pl__ring" transform="rotate(0)">
+                        <ellipse class="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsla(223,90%,50%,0)" />
+                        <ellipse class="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsla(223,90%,50%,0.5)"
+                            stroke-dasharray="50 240" />
+                        <ellipse class="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsl(223,90%,50%)"
+                            stroke-dasharray="25 265" />
+                    </g>
+                    <g class="pl__ring" transform="rotate(0)">
+                        <ellipse class="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsla(223,90%,50%,0)" />
+                        <ellipse class="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsla(223,90%,50%,0.5)"
+                            stroke-dasharray="50 240" />
+                        <ellipse class="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsl(223,90%,50%)"
+                            stroke-dasharray="25 265" />
+                    </g>
+                    <g class="pl__ring" transform="rotate(180)">
+                        <ellipse class="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsla(223,90%,50%,0.3)" />
+                        <ellipse class="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsla(223,90%,50%,0.5)"
+                            stroke-dasharray="50 240" />
+                        <ellipse class="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsl(223,90%,50%)"
+                            stroke-dasharray="25 265" />
+                    </g>
+                    <g class="pl__ring" transform="rotate(180)">
+                        <ellipse class="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsla(223,90%,50%,0)" />
+                        <ellipse class="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsla(223,90%,50%,0.5)"
+                            stroke-dasharray="50 240" />
+                        <ellipse class="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsl(223,90%,50%)"
+                            stroke-dasharray="25 265" />
+                    </g>
+                    <g class="pl__ring" transform="rotate(0)">
+                        <ellipse class="pl__electron" cx="64" cy="64" rx="60" ry="30" stroke="hsl(0,0%,100%)"
+                            stroke-dasharray="1 289" stroke-width="8" />
+                        <ellipse class="pl__electron" cx="64" cy="64" rx="60" ry="30" stroke="hsl(0,0%,100%)"
+                            stroke-dasharray="1 289" stroke-width="8" />
+                    </g>
+                    <g class="pl__ring" transform="rotate(180)">
+                        <ellipse class="pl__electron" cx="64" cy="64" rx="60" ry="30" stroke="hsl(0,0%,100%)"
+                            stroke-dasharray="1 289" stroke-width="8" />
+                        <ellipse class="pl__electron" cx="64" cy="64" rx="60" ry="30" stroke="hsl(0,0%,100%)"
+                            stroke-dasharray="1 289" stroke-width="8" />
+                        <ellipse class="pl__electron" cx="64" cy="64" rx="60" ry="30" stroke="hsl(0,0%,100%)"
+                            stroke-dasharray="1 289" stroke-width="8" />
+                        <ellipse class="pl__electron" cx="64" cy="64" rx="60" ry="30" stroke="hsl(0,0%,100%)"
+                            stroke-dasharray="1 289" stroke-width="8" />
+                    </g>
+                </g>
+            </svg>
+            <div class="pl__nucleus">
+                <div class="pl__nucleus-particle"></div>
+                <div class="pl__nucleus-particle"></div>
+                <div class="pl__nucleus-particle"></div>
+                <div class="pl__nucleus-particle"></div>
+                <div class="pl__nucleus-particle"></div>
+                <div class="pl__nucleus-particle"></div>
+                <div class="pl__nucleus-particle"></div>
+                <div class="pl__nucleus-particle"></div>
+                <div class="pl__nucleus-particle"></div>
+                <div class="pl__nucleus-particle"></div>
+                <div class="pl__nucleus-particle"></div>
+                <div class="pl__nucleus-particle"></div>
+                <div class="pl__nucleus-particle"></div>
+            </div>
+        </div>
+    </div>
     <div class="wrapper">
         <header class="header">
         
@@ -28,9 +110,10 @@
         				</div>
         				<nav class='header__navigation header__navigation-desktop'>
         					<ul class='d-f ai-c'>
-        						<li><a href="#" class='header__navigation-item header__navigation-item-desktop'>Аукцион</a></li>
-        						<li><a href="#" class='header__navigation-item header__navigation-item-desktop'>Стикеры</a></li>
-        						<li><a href="#" class='header__navigation-item header__navigation-item-desktop'>Быть автором</a></li>
+        						<li><a href="#auction" class='header__navigation-item header__navigation-item-desktop'>Аукцион</a></li>
+        						<li><a href="#new-stickers" class='header__navigation-item header__navigation-item-desktop'>Стикеры</a></li>
+        						<li><a href="#be-author" class='header__navigation-item header__navigation-item-desktop'>Быть автором</a>
+        						</li>
         					</ul>
         				</nav>
         			</div>
@@ -58,23 +141,30 @@
         
         		<nav class='header__navigation header__navigation-mobile '>
         			<ul class='d-f ai-c d-f jc-sb'>
-        				<li><a href="#" class='header__navigation-item header__navigation-item-mobile'>Аукцион</a></li>
-        				<li><a href="#" class='header__navigation-item header__navigation-item-mobile'>Стикеры</a></li>
-        				<li><a href="#" class='header__navigation-item header__navigation-item-mobile'>Быть автором</a></li>
+        				<li><a href="#auction" class='header__navigation-item header__navigation-item-mobile'>Аукцион</a></li>
+        				<li><a href="#new-stickers" class='header__navigation-item header__navigation-item-mobile'>Стикеры</a></li>
+        				<li><a href="#be-author" class='header__navigation-item header__navigation-item-mobile'>Быть автором</a></li>
         			</ul>
         		</nav>
         	</div>
         </header>        <main class="content"><section class="intro">
-	<img src="./assets/images/intro-desktop.png" alt="компании" class='intro__companies intro__companies-desktop'>
+	<img data-aos="fade-left" src="./assets/images/intro-desktop.png" alt="компании"
+		class='intro__companies intro__companies-desktop'>
 	<img src="./assets/images/intro-mobile.png" alt="компании" class='intro__companies intro__companies-mobile'>
 	<div class="container">
 		<h1>Площадка для реализации криптостикеров</h1>
-		<button class="btn btn1">Купить</button>
-		<button class="btn btn1">Стать автором</button>
+		<div class="intro__buttons d-f ai-c">
+			<div class="aos-wrapper" data-aos="fade-right">
+				<button class="btn btn1">Купить</button>
+			</div>
+			<div class="aos-wrapper" data-aos="fade-left">
+				<button class="btn btn1">Стать автором</button>
+			</div>
+		</div>
 	</div>
 </section>
 
-<section class='auction section'>
+<section class='auction section' id='auction'>
 	<div class="container">
 		<div class="auction__title d-f ai-c">
 			<h2 class="title">Аукцион</h2>
@@ -100,12 +190,12 @@
 				<h3>Witcherrr_3 (xml_t5)</h3>
 				<div class="auction__middle ">
 					<div class="auction__middle-row d-g">
-						<div class="auction__middle-left">
+						<div class="auction__middle-left" data-aos="fade-right">
 							<p>Ставка:</p>
 							<p>0.10 ETH</p>
 							<p>$351.24</p>
 						</div>
-						<div class="auction__middle-right d-g">
+						<div class="auction__middle-right d-g" data-aos="fade-left">
 							<div class="auction__middle-right-row d-g">
 								<div class="auction__middle-right-column">
 									<p>Окончание через:</p>
@@ -133,7 +223,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="auction__bottom">
+				<div class="auction__bottom" data-aos="fade-up">
 					<button class="btn btn2">
 						<span>Cделать ставку</span>
 					</button>
@@ -154,7 +244,7 @@
 				<div class="another-auctions__description">
 					<div class="another-auctions__top d-f ai-c">
 						<div class="another-auctions__top-img">
-							<img src="./assets/images/another-auctions-creator.png" alt="Другие аукционы">
+							<img src="./assets/images/another-auctions-creator1.png" alt="Другие аукционы">
 						</div>
 						<div class='text-cut-wrapper'>
 							<h4>Frank.Nagval</h4>
@@ -169,12 +259,12 @@
 			</div>
 			<div class="another-auctions__column">
 				<div class="another-auctions__column-img d-f jc-c">
-					<img src="./assets/images/another-auction1.png" alt="another-auctions">
+					<img src="./assets/images/another-auction2.png" alt="another-auctions">
 				</div>
 				<div class="another-auctions__description">
 					<div class="another-auctions__top d-f ai-c">
 						<div class="another-auctions__top-img">
-							<img src="./assets/images/another-auctions-creator.png" alt="Другие аукционы">
+							<img src="./assets/images/another-auctions-creator2.png" alt="Другие аукционы">
 						</div>
 						<div class='text-cut-wrapper'>
 							<h4>Frank.Nagval</h4>
@@ -189,12 +279,12 @@
 			</div>
 			<div class="another-auctions__column">
 				<div class="another-auctions__column-img d-f jc-c">
-					<img src="./assets/images/another-auction1.png" alt="another-auctions">
+					<img src="./assets/images/another-auction3.png" alt="another-auctions">
 				</div>
 				<div class="another-auctions__description">
 					<div class="another-auctions__top d-f ai-c">
 						<div class="another-auctions__top-img">
-							<img src="./assets/images/another-auctions-creator.png" alt="Другие аукционы">
+							<img src="./assets/images/another-auctions-creator3.png" alt="Другие аукционы">
 						</div>
 						<div class='text-cut-wrapper'>
 							<h4>Frank.Nagval</h4>
@@ -209,12 +299,12 @@
 			</div>
 			<div class="another-auctions__column">
 				<div class="another-auctions__column-img d-f jc-c">
-					<img src="./assets/images/another-auction1.png" alt="another-auctions">
+					<img src="./assets/images/another-auction4.png" alt="another-auctions">
 				</div>
 				<div class="another-auctions__description">
 					<div class="another-auctions__top d-f ai-c">
 						<div class="another-auctions__top-img">
-							<img src="./assets/images/another-auctions-creator.png" alt="Другие аукционы">
+							<img src="./assets/images/another-auctions-creator4.png" alt="Другие аукционы">
 						</div>
 						<div class='text-cut-wrapper'>
 							<h4>Frank.Nagval</h4>
@@ -229,12 +319,12 @@
 			</div>
 			<div class="another-auctions__column">
 				<div class="another-auctions__column-img d-f jc-c">
-					<img src="./assets/images/another-auction1.png" alt="another-auctions">
+					<img src="./assets/images/another-auction5.png" alt="another-auctions">
 				</div>
 				<div class="another-auctions__description">
 					<div class="another-auctions__top d-f ai-c">
 						<div class="another-auctions__top-img">
-							<img src="./assets/images/another-auctions-creator.png" alt="Другие аукционы">
+							<img src="./assets/images/another-auctions-creator5.png" alt="Другие аукционы">
 						</div>
 						<div class='text-cut-wrapper'>
 							<h4>Frank.Nagval</h4>
@@ -249,12 +339,12 @@
 			</div>
 			<div class="another-auctions__column">
 				<div class="another-auctions__column-img d-f jc-c">
-					<img src="./assets/images/another-auction1.png" alt="another-auctions">
+					<img src="./assets/images/another-auction6.png" alt="another-auctions">
 				</div>
 				<div class="another-auctions__description">
 					<div class="another-auctions__top d-f ai-c">
 						<div class="another-auctions__top-img">
-							<img src="./assets/images/another-auctions-creator.png" alt="Другие аукционы">
+							<img src="./assets/images/another-auctions-creator6.png" alt="Другие аукционы">
 						</div>
 						<div class='text-cut-wrapper'>
 							<h4>Frank.Nagval</h4>
@@ -267,6 +357,47 @@
 					<p>03 часа 25 мин 23 сек</p>
 				</div>
 			</div>
+			<div class="another-auctions__column">
+				<div class="another-auctions__column-img d-f jc-c">
+					<img src="./assets/images/another-auction7.png" alt="another-auctions">
+				</div>
+				<div class="another-auctions__description">
+					<div class="another-auctions__top d-f ai-c">
+						<div class="another-auctions__top-img">
+							<img src="./assets/images/another-auctions-creator7.png" alt="Другие аукционы">
+						</div>
+						<div class='text-cut-wrapper'>
+							<h4>Frank.Nagval</h4>
+						</div>
+					</div>
+					<div class='text-cut-wrapper'>
+						<p>Alien (green) e_e</p>
+					</div>
+					<p>0.02 ETH</p>
+					<p>03 часа 25 мин 23 сек</p>
+				</div>
+			</div>
+			<div class="another-auctions__column">
+				<div class="another-auctions__column-img d-f jc-c">
+					<img src="./assets/images/another-auction8.png" alt="another-auctions">
+				</div>
+				<div class="another-auctions__description">
+					<div class="another-auctions__top d-f ai-c">
+						<div class="another-auctions__top-img">
+							<img src="./assets/images/another-auctions-creator8.png" alt="Другие аукционы">
+						</div>
+						<div class='text-cut-wrapper'>
+							<h4>Frank.Nagval</h4>
+						</div>
+					</div>
+					<div class='text-cut-wrapper'>
+						<p>Alien (green) e_e</p>
+					</div>
+					<p>0.02 ETH</p>
+					<p>03 часа 25 мин 23 сек</p>
+				</div>
+			</div>
+
 		</div>
 		<div class="another-auctions__bottom d-f jc-c">
 			<button class='another-auctions__bottom-btn btn btn2'><span>Показать все</span></button>
@@ -276,7 +407,7 @@
 
 
 
-<section class='new-stickers section'>
+<section class='new-stickers section' id='new-stickers'>
 	<div class="container">
 		<div class="new-stickers__title d-f ai-c">
 			<div class="new-stickers__title-img">
@@ -285,7 +416,7 @@
 			<h2 class="title">Новые стикеры</h2>
 		</div>
 		<div class="swiper-container new-stickers__swiper-container">
-			<div class="swiper-wrapper new-stickers__swiper-wrapper">
+			<div class="swiper-wrapper new-stickers__swiper-wrapper ai-c">
 				<div class="swiper-slide">
 					<div class="new-stickers__column d-f ai-c jc-c">
 						<div class="new-stickers__img">
@@ -296,28 +427,28 @@
 				<div class="swiper-slide">
 					<div class="new-stickers__column d-f ai-c jc-c">
 						<div class="new-stickers__img">
-							<img src="./assets/images/new-sticker1.png" alt="новые стикеры">
+							<img src="./assets/images/new-sticker2.png" alt="новые стикеры">
 						</div>
 					</div>
 				</div>
 				<div class="swiper-slide">
 					<div class="new-stickers__column d-f ai-c jc-c">
 						<div class="new-stickers__img">
-							<img src="./assets/images/new-sticker1.png" alt="новые стикеры">
+							<img src="./assets/images/new-sticker3.png" alt="новые стикеры">
 						</div>
 					</div>
 				</div>
 				<div class="swiper-slide">
 					<div class="new-stickers__column d-f ai-c jc-c">
 						<div class="new-stickers__img">
-							<img src="./assets/images/new-sticker1.png" alt="новые стикеры">
+							<img src="./assets/images/new-sticker4.png" alt="новые стикеры">
 						</div>
 					</div>
 				</div>
-				<div class="swiper-slide">
+				<div class="swiper-slide ">
 					<div class="new-stickers__column d-f ai-c jc-c">
 						<div class="new-stickers__img">
-							<img src="./assets/images/new-sticker1.png" alt="новые стикеры">
+							<img src="./assets/images/new-sticker5.png" alt="новые стикеры">
 						</div>
 					</div>
 				</div>
@@ -331,21 +462,21 @@
 </section>
 
 
-<section class="distribution section">
+<section class="distribution ">
 
 	<div class="container">
 		<div class="distribution__okeys">
 			<div class="distribution__okey">
-				<img src="./assets/images/okay.png" alt="okay">
+				<img src="./assets/images/okay.png" alt="okay" data-aos="fade-up">
 			</div>
 			<div class="distribution__okey">
-				<img src="./assets/images/okay.png" alt="okay">
+				<img src="./assets/images/okay.png" alt="okay" data-aos="fade-down">
 			</div>
 			<div class="distribution__okey">
-				<img src="./assets/images/okay.png" alt="okay">
+				<img src="./assets/images/okay.png" alt="okay" data-aos="fade-up">
 			</div>
 			<div class="distribution__okey">
-				<img src="./assets/images/okay.png" alt="okay">
+				<img src="./assets/images/okay.png" alt="okay" data-aos="fade-down">
 			</div>
 		</div>
 		<form action="" class='distribution__form'>
@@ -367,7 +498,7 @@
 
 </section>
 
-<section class="be-author section">
+<section class="be-author section" id='be-author'>
 	<div class="container">
 		<div class="be-author__row d-g">
 			<div class="be-author__column">
@@ -381,13 +512,13 @@
 				</p>
 				<div class="be-author__imgs">
 					<div class="be-author__img">
-						<img src="./assets/images/be-author1.png" alt="Стать автором">
+						<img src="./assets/images/be-author1.png" alt="Стать автором" data-aos="fade-right" data-aos-delay="300">
 					</div>
 					<div class="be-author__img">
-						<img src="./assets/images/be-author2.png" alt="Стать автором">
+						<img src="./assets/images/be-author2.png" alt="Стать автором" data-aos="fade-right" data-aos-delay="200">
 					</div>
 					<div class="be-author__img">
-						<img src="./assets/images/be-author3.png" alt="Стать автором">
+						<img src="./assets/images/be-author3.png" alt="Стать автором" data-aos="fade-right" data-aos-delay="100">
 					</div>
 				</div>
 			</div>
@@ -419,9 +550,9 @@
 	<div class="container">
 		<h2 class='title'>Топ продаж</h2>
 		<div class="top-sell__row d-g">
-			<div class="top-sell__column">
+			<div class="top-sell__column" data-aos="fade-right">
 				<div class="top-sell__column-row d-g">
-					<div class="top-sell__column-left">
+					<div class="top-sell__column-left jc-c">
 						<div class="top-sell__column-img-desktop">
 							<img src="./assets/images/top-sell1.png" alt="Топ продаж">
 						</div>
@@ -429,42 +560,164 @@
 							<img src="./assets/images/top-sell-mobile1.png" alt="Топ продаж">
 						</div>
 					</div>
-					<div class="top-sell__column-right d-f ">
+					<div class="top-sell__column-right d-f">
 						<div class='top-sell__column-top d-f ai-c'>
 							<div class="top-sell__column-top-img">
-								<img src="./assets/images/top-sell-author1.png" alt="Топ продаж" />
+								<img src="./assets/images/another-auctions-creator1.png" alt="Топ продаж" />
 							</div>
 
-							<h5>ttgsasccsa</h5>
+							<div class="text-cut-wrapper">
+								<h5>ttgsasccsa</h5>
+							</div>
 						</div>
-						<p>saccsa</p>
+						<div class="text-cut-wrapper">
+							<h4>saccsa</h4>
+						</div>
 						<p><b>4.70 ETH</b> ($16,873.47)</p>
 					</div>
 				</div>
 			</div>
-			<div class="top-sell__column">
+			<div class="top-sell__column" data-aos="fade-right">
 				<div class="top-sell__column-row d-g">
-					<div class="top-sell__column-left">
+					<div class="top-sell__column-left jc-c">
 						<div class="top-sell__column-img-desktop">
-							<img src="./assets/images/top-sell1.png" alt="Топ продаж">
+							<img src="./assets/images/top-sell2.png" alt="Топ продаж">
 						</div>
 						<div class="top-sell__column-img-mobile jc-c">
-							<img src="./assets/images/top-sell-mobile1.png" alt="Топ продаж">
+							<img src="./assets/images/top-sell-mobile2.png" alt="Топ продаж">
 						</div>
 					</div>
-					<div class="top-sell__column-right d-f ">
+					<div class="top-sell__column-right d-f">
 						<div class='top-sell__column-top d-f ai-c'>
 							<div class="top-sell__column-top-img">
-								<img src="./assets/images/top-sell-author1.png" alt="Топ продаж" />
+								<img src="./assets/images/another-auctions-creator2.png" alt="Топ продаж" />
+
 							</div>
 
-							<h5>ttgsasccsa</h5>
+							<div class="text-cut-wrapper">
+								<h5>ttgsasccsa</h5>
+							</div>
 						</div>
-						<p>saccsa</p>
+						<div class="text-cut-wrapper">
+							<h4>saccsa</h4>
+						</div>
 						<p><b>4.70 ETH</b> ($16,873.47)</p>
 					</div>
 				</div>
 			</div>
+			<div class="top-sell__column" data-aos="fade-right">
+				<div class="top-sell__column-row d-g">
+					<div class="top-sell__column-left jc-c">
+						<div class="top-sell__column-img-desktop">
+							<img src="./assets/images/top-sell3.png" alt="Топ продаж">
+						</div>
+						<div class="top-sell__column-img-mobile jc-c">
+							<img src="./assets/images/top-sell-mobile3.png" alt="Топ продаж">
+						</div>
+					</div>
+					<div class="top-sell__column-right d-f">
+						<div class='top-sell__column-top d-f ai-c'>
+							<div class="top-sell__column-top-img">
+								<img src="./assets/images/another-auctions-creator3.png" alt="Топ продаж" />
+
+							</div>
+
+							<div class="text-cut-wrapper">
+								<h5>ttgsasccsa</h5>
+							</div>
+						</div>
+						<div class="text-cut-wrapper">
+							<h4>saccsa</h4>
+						</div>
+						<p><b>4.70 ETH</b> ($16,873.47)</p>
+					</div>
+				</div>
+			</div>
+			<div class="top-sell__column" data-aos="fade-right">
+				<div class="top-sell__column-row d-g">
+					<div class="top-sell__column-left jc-c">
+						<div class="top-sell__column-img-desktop">
+							<img src="./assets/images/top-sell4.png" alt="Топ продаж">
+						</div>
+						<div class="top-sell__column-img-mobile jc-c">
+							<img src="./assets/images/top-sell-mobile4.png" alt="Топ продаж">
+						</div>
+					</div>
+					<div class="top-sell__column-right d-f">
+						<div class='top-sell__column-top d-f ai-c'>
+							<div class="top-sell__column-top-img">
+								<img src="./assets/images/another-auctions-creator4.png" alt="Топ продаж" />
+
+							</div>
+
+							<div class="text-cut-wrapper">
+								<h5>ttgsasccsa</h5>
+							</div>
+						</div>
+						<div class="text-cut-wrapper">
+							<h4>saccsa</h4>
+						</div>
+						<p><b>4.70 ETH</b> ($16,873.47)</p>
+					</div>
+				</div>
+			</div>
+			<div class="top-sell__column" data-aos="fade-right">
+				<div class="top-sell__column-row d-g">
+					<div class="top-sell__column-left jc-c">
+						<div class="top-sell__column-img-desktop">
+							<img src="./assets/images/top-sell5.png" alt="Топ продаж">
+						</div>
+						<div class="top-sell__column-img-mobile jc-c">
+							<img src="./assets/images/top-sell-mobile5.png" alt="Топ продаж">
+						</div>
+					</div>
+					<div class="top-sell__column-right d-f">
+						<div class='top-sell__column-top d-f ai-c'>
+							<div class="top-sell__column-top-img">
+								<img src="./assets/images/another-auctions-creator5.png" alt="Топ продаж" />
+
+							</div>
+
+							<div class="text-cut-wrapper">
+								<h5>ttgsasccsa</h5>
+							</div>
+						</div>
+						<div class="text-cut-wrapper">
+							<h4>saccsa</h4>
+						</div>
+						<p><b>4.70 ETH</b> ($16,873.47)</p>
+					</div>
+				</div>
+			</div>
+			<div class="top-sell__column" data-aos="fade-right">
+				<div class="top-sell__column-row d-g">
+					<div class="top-sell__column-left jc-c">
+						<div class="top-sell__column-img-desktop">
+							<img src="./assets/images/top-sell6.png" alt="Топ продаж">
+						</div>
+						<div class="top-sell__column-img-mobile jc-c">
+							<img src="./assets/images/top-sell-mobile6.png" alt="Топ продаж">
+						</div>
+					</div>
+					<div class="top-sell__column-right d-f">
+						<div class='top-sell__column-top d-f ai-c '>
+							<div class="top-sell__column-top-img ">
+								<img src="./assets/images/another-auctions-creator6.png" alt="Топ продаж" />
+
+							</div>
+
+							<div class="text-cut-wrapper">
+								<h5>ttgsasccsa</h5>
+							</div>
+						</div>
+						<div class="text-cut-wrapper">
+							<h4>saccsa</h4>
+						</div>
+						<p><b>4.70 ETH</b> ($16,873.47)</p>
+					</div>
+				</div>
+			</div>
+
 
 		</div>
 	</div>
@@ -472,55 +725,58 @@
 
 <section class="hitting-top">
 	<div class="container">
-		<h4>Для попадания в топ необходимо:</h4>
-		<p class='d-f ai-c'>
-			<span>
-				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-					<g clip-path="url(#clip0_27_174)">
-						<path
-							d="M29.3332 21.3334V5.33341C29.3332 3.86675 28.1332 2.66675 26.6665 2.66675H10.6665C9.19984 2.66675 7.99984 3.86675 7.99984 5.33341V21.3334C7.99984 22.8001 9.19984 24.0001 10.6665 24.0001H26.6665C28.1332 24.0001 29.3332 22.8001 29.3332 21.3334ZM14.6665 16.0001L17.3732 19.6134L21.3332 14.6667L26.6665 21.3334H10.6665L14.6665 16.0001ZM2.6665 8.00008V26.6667C2.6665 28.1334 3.8665 29.3334 5.33317 29.3334H23.9998V26.6667H5.33317V8.00008H2.6665Z"
-							fill="#46F4DB" />
-					</g>
-					<defs>
-						<clipPath id="clip0_27_174">
-							<rect width="32" height="32" fill="white" />
-						</clipPath>
-					</defs>
-				</svg>
-			</span><span>Минимум пять опубликованных работ</span>
-		</p>
-		<p class='d-f ai-c'>
-			<span>
-				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-					<g clip-path="url(#clip0_27_174)">
-						<path
-							d="M29.3332 21.3334V5.33341C29.3332 3.86675 28.1332 2.66675 26.6665 2.66675H10.6665C9.19984 2.66675 7.99984 3.86675 7.99984 5.33341V21.3334C7.99984 22.8001 9.19984 24.0001 10.6665 24.0001H26.6665C28.1332 24.0001 29.3332 22.8001 29.3332 21.3334ZM14.6665 16.0001L17.3732 19.6134L21.3332 14.6667L26.6665 21.3334H10.6665L14.6665 16.0001ZM2.6665 8.00008V26.6667C2.6665 28.1334 3.8665 29.3334 5.33317 29.3334H23.9998V26.6667H5.33317V8.00008H2.6665Z"
-							fill="#46F4DB" />
-					</g>
-					<defs>
-						<clipPath id="clip0_27_174">
-							<rect width="32" height="32" fill="white" />
-						</clipPath>
-					</defs>
-				</svg>
-			</span><span>Минимум пять опубликованных работ</span>
-		</p>
-		<p class='d-f ai-c'>
-			<span>
-				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-					<g clip-path="url(#clip0_27_174)">
-						<path
-							d="M29.3332 21.3334V5.33341C29.3332 3.86675 28.1332 2.66675 26.6665 2.66675H10.6665C9.19984 2.66675 7.99984 3.86675 7.99984 5.33341V21.3334C7.99984 22.8001 9.19984 24.0001 10.6665 24.0001H26.6665C28.1332 24.0001 29.3332 22.8001 29.3332 21.3334ZM14.6665 16.0001L17.3732 19.6134L21.3332 14.6667L26.6665 21.3334H10.6665L14.6665 16.0001ZM2.6665 8.00008V26.6667C2.6665 28.1334 3.8665 29.3334 5.33317 29.3334H23.9998V26.6667H5.33317V8.00008H2.6665Z"
-							fill="#46F4DB" />
-					</g>
-					<defs>
-						<clipPath id="clip0_27_174">
-							<rect width="32" height="32" fill="white" />
-						</clipPath>
-					</defs>
-				</svg>
-			</span><span>Минимум пять опубликованных работ</span>
-		</p>
+		<div class="hitting-top__left">
+			<h4>Для попадания в топ необходимо:</h4>
+			<p class='d-f ai-c'>
+				<span>
+					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+						<g clip-path="url(#clip0_27_174)">
+							<path
+								d="M29.3332 21.3334V5.33341C29.3332 3.86675 28.1332 2.66675 26.6665 2.66675H10.6665C9.19984 2.66675 7.99984 3.86675 7.99984 5.33341V21.3334C7.99984 22.8001 9.19984 24.0001 10.6665 24.0001H26.6665C28.1332 24.0001 29.3332 22.8001 29.3332 21.3334ZM14.6665 16.0001L17.3732 19.6134L21.3332 14.6667L26.6665 21.3334H10.6665L14.6665 16.0001ZM2.6665 8.00008V26.6667C2.6665 28.1334 3.8665 29.3334 5.33317 29.3334H23.9998V26.6667H5.33317V8.00008H2.6665Z"
+								fill="#46F4DB" />
+						</g>
+						<defs>
+							<clipPath id="clip0_27_174">
+								<rect width="32" height="32" fill="white" />
+							</clipPath>
+						</defs>
+					</svg>
+				</span><span>Минимум пять опубликованных работ с фысы сф ыс фс ы фсы сфсфысфы с фысф ысф </span>
+			</p>
+			<p class='d-f ai-c'>
+				<span>
+					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+						<g clip-path="url(#clip0_27_174)">
+							<path
+								d="M29.3332 21.3334V5.33341C29.3332 3.86675 28.1332 2.66675 26.6665 2.66675H10.6665C9.19984 2.66675 7.99984 3.86675 7.99984 5.33341V21.3334C7.99984 22.8001 9.19984 24.0001 10.6665 24.0001H26.6665C28.1332 24.0001 29.3332 22.8001 29.3332 21.3334ZM14.6665 16.0001L17.3732 19.6134L21.3332 14.6667L26.6665 21.3334H10.6665L14.6665 16.0001ZM2.6665 8.00008V26.6667C2.6665 28.1334 3.8665 29.3334 5.33317 29.3334H23.9998V26.6667H5.33317V8.00008H2.6665Z"
+								fill="#46F4DB" />
+						</g>
+						<defs>
+							<clipPath id="clip0_27_174">
+								<rect width="32" height="32" fill="white" />
+							</clipPath>
+						</defs>
+					</svg>
+				</span><span>Минимум пять опубликованных работ</span>
+			</p>
+			<p class='d-f ai-c'>
+				<span>
+					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+						<g clip-path="url(#clip0_27_174)">
+							<path
+								d="M29.3332 21.3334V5.33341C29.3332 3.86675 28.1332 2.66675 26.6665 2.66675H10.6665C9.19984 2.66675 7.99984 3.86675 7.99984 5.33341V21.3334C7.99984 22.8001 9.19984 24.0001 10.6665 24.0001H26.6665C28.1332 24.0001 29.3332 22.8001 29.3332 21.3334ZM14.6665 16.0001L17.3732 19.6134L21.3332 14.6667L26.6665 21.3334H10.6665L14.6665 16.0001ZM2.6665 8.00008V26.6667C2.6665 28.1334 3.8665 29.3334 5.33317 29.3334H23.9998V26.6667H5.33317V8.00008H2.6665Z"
+								fill="#46F4DB" />
+						</g>
+						<defs>
+							<clipPath id="clip0_27_174">
+								<rect width="32" height="32" fill="white" />
+							</clipPath>
+						</defs>
+					</svg>
+				</span><span>Минимум пять опубликованных работ</span>
+			</p>
+		</div>
+
 
 	</div>
 	<div class='hitting-top__imgs-right'>
@@ -530,7 +786,6 @@
 		<img src="./assets/images/smile.png" alt="улыбка" class='hitting-top__img-right'>
 		<img src="./assets/images/smile.png" alt="улыбка" class='hitting-top__img-right'>
 	</div>
-
 </section>
 </main>
         <footer class='footer'>
@@ -559,6 +814,15 @@
         	</section>
         </footer>    </div>
 
+    <!-- smooth show blocks  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            disable: 'phone',
+            once: true,
+            delay: 100
+        });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> <!-- slider -->
     <script src="assets/js/app.js"></script>
 </body>

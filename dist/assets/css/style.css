@@ -285,6 +285,24 @@ body {
 		);
 }
 
+.swiper-container {
+    overflow: hidden;
+}
+
+.text-cut-wrapper {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+}
+
+.text-cut-wrapper * {
+    white-space: nowrap;
+  /* Запрет переноса текста на новую строку */
+    overflow: hidden;
+  /* Скрытие избыточного текста, не влезающего в контейнер */
+    text-overflow: ellipsis;
+  /* Добавление многоточия в конец текста */
+}
+
 .btn {
     display: inline-block;
     padding: 25px 55px;
@@ -433,6 +451,39 @@ body {
     }
 }
 
+.header__navigation-item--active {
+    position: relative;
+}
+
+.header__navigation-item--active:before {
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: calc(100% + 8px);
+    top: calc(4px/ -1);
+    left: calc(4px/ -1);
+    background: linear-gradient(to right, #46f4db 0%, #46f4db 100%), linear-gradient(to top, #46f4db 50%, transparent 50%), linear-gradient(to top, #46f4db 50%, transparent 50%), linear-gradient(to right, #46f4db 0%, #46f4db 100%), linear-gradient(to left, #46f4db 0%, #46f4db 100%);
+    background-repeat: no-repeat, no-repeat;
+    transition: background-position 0.1s ease-in-out, background-size 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
+    transition: transform 0.1s ease-in-out, background-position 0.1s ease-in-out, background-size 0.1s ease-in-out;
+    transition: transform 0.1s ease-in-out, background-position 0.1s ease-in-out, background-size 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
+    background-size: 200% 4px, 4px 400%, 4px 400%, 55% 4px, 55% 4px !important;
+    background-position: 50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0% !important;
+    -webkit-transform: scaleX(1) rotate(180deg) !important;
+    transform: scaleX(1) rotate(180deg) !important;
+    transition-delay: 0s, 0.1s, 0.2s !important;
+}
+
+@media (min-width: 768px) {
+    .header__navigation-item--active:hover:before {
+        background-size: 200% 4px, 4px 400%, 4px 400%, 55% 4px, 55% 4px;
+        background-position: 50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
+        -webkit-transform: scaleX(1) rotate(180deg);
+        transform: scaleX(1) rotate(180deg);
+        transition-delay: 0s, 0.1s, 0.2s;
+    }
+}
+
 .header__navigation ul li {
     margin-right: calc(
 			20px + 10 * ((100vw - 320px) / 1600)
@@ -456,23 +507,25 @@ body {
     top: calc(4px/ -1);
     left: calc(4px/ -1);
     background: linear-gradient(to right, #46f4db 0%, #46f4db 100%), linear-gradient(to top, #46f4db 50%, transparent 50%), linear-gradient(to top, #46f4db 50%, transparent 50%), linear-gradient(to right, #46f4db 0%, #46f4db 100%), linear-gradient(to left, #46f4db 0%, #46f4db 100%);
-    background-size: 100% 4px, 4px 200%, 4px 200%, 0% 4px, 0% 4px;
-    background-position: 50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
     background-repeat: no-repeat, no-repeat;
     transition: background-position 0.1s ease-in-out, background-size 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
     transition: transform 0.1s ease-in-out, background-position 0.1s ease-in-out, background-size 0.1s ease-in-out;
     transition: transform 0.1s ease-in-out, background-position 0.1s ease-in-out, background-size 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
+    background-size: 100% 4px, 4px 200%, 4px 200%, 0% 4px, 0% 4px;
+    background-position: 50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
     -webkit-transform: scaleX(0) rotate(180deg);
     transform: scaleX(0) rotate(180deg);
     transition-delay: 0.2s, 0.1s, 0s;
 }
 
-.header__navigation ul li a:hover:before {
-    background-size: 200% 4px, 4px 400%, 4px 400%, 55% 4px, 55% 4px;
-    background-position: 50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
-    -webkit-transform: scaleX(1) rotate(180deg);
-    transform: scaleX(1) rotate(180deg);
-    transition-delay: 0s, 0.1s, 0.2s;
+@media (min-width: 768px) {
+    .header__navigation ul li a:hover:before {
+        background-size: 200% 4px, 4px 400%, 4px 400%, 55% 4px, 55% 4px;
+        background-position: 50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
+        -webkit-transform: scaleX(1) rotate(180deg);
+        transform: scaleX(1) rotate(180deg);
+        transition-delay: 0s, 0.1s, 0.2s;
+    }
 }
 
 .header__navigation-mobile {
@@ -544,12 +597,28 @@ body {
     overflow: hidden;
     position: relative;
     background: #07060b;
-    padding-top: calc(
-			65px + 135 * ((100vw - 320px) / 1600)
-		);
-    padding-bottom: calc(
-			210px + -10 * ((100vw - 320px) / 1600)
-		);
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+@media screen and (max-width: 1440px) {
+    .intro {
+        padding-top: 170px;
+        padding-bottom: 170px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .intro {
+        padding-top: 200px;
+        padding-bottom: 80px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .intro {
+        padding-bottom: 190px;
+    }
 }
 
 .intro__companies {
@@ -557,7 +626,7 @@ body {
 }
 
 .intro__companies-desktop {
-    top: 65px;
+    bottom: 0;
     right: calc(
 			-300px + 150 * ((100vw - 320px) / 1600)
 		);
@@ -784,6 +853,30 @@ body {
     grid-template-columns: 1fr 121px;
 }
 
+@media screen and (max-width: 1024px) {
+    .auction__middle-right-row {
+        grid-template-columns: 1fr 100px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .auction__middle-right-row {
+        grid-template-columns: 1fr 80px;
+    }
+}
+
+@media screen and (max-width: 768px) and (max-width: 425px) {
+    .auction__middle-right-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .auction__middle-right-column:nth-of-type(2) {
+        display: none;
+    }
+}
+
 .auction__middle-right-column > p {
     margin-bottom: 16px;
 }
@@ -806,6 +899,15 @@ body {
 		);
 }
 
+@media screen and (max-width: 768px) {
+    .auction__bottom {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+}
+
 .another-auctions h3 {
     margin-bottom: 32px;
     font-size: 20px;
@@ -815,6 +917,9 @@ body {
     grid-template-columns: repeat(4, 1fr);
     gap: calc(
 			16px + 16 * ((100vw - 320px) / 1600)
+		);
+    margin-bottom: calc(
+			20px + 30 * ((100vw - 320px) / 1600)
 		);
 }
 
@@ -828,6 +933,10 @@ body {
     .another-auctions__row {
         grid-template-columns: 1fr;
     }
+}
+
+.another-auctions__column--hidden {
+    display: none;
 }
 
 .another-auctions__column-img {
@@ -861,6 +970,10 @@ body {
     color: #95959d;
 }
 
+.another-auctions__bottom-btn--hidden {
+    display: none;
+}
+
 .another-auctions__top {
     margin-bottom: 20px;
 }
@@ -871,9 +984,10 @@ body {
 }
 
 .another-auctions__top-img {
-    width: 24px;
     border-radius: 24px;
     margin-right: 8px;
+    -ms-flex: 0 0 24px;
+    flex: 0 0 24px;
 }
 
 .new-stickers {
@@ -903,18 +1017,10 @@ body {
 		);
 }
 
-.new-stickers__row {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+.new-stickers__swiper-container {
     margin-bottom: calc(
 			32px + 33 * ((100vw - 320px) / 1600)
 		);
-}
-
-@media screen and (max-width: 1024px) {
-    .new-stickers__row {
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
 
 .new-stickers__button {
@@ -943,7 +1049,15 @@ body {
     cursor: pointer;
 }
 
-.new-stickers__button--active, .new-stickers__button:hover {
+.new-stickers__button:hover {
+    background: #d13130;
+}
+
+.swiper-pagination-bullet-active {
+    background: #d13130;
+}
+
+.swiper-pagination-bullet-active:hover {
     background: #d13130;
 }
 
@@ -1005,6 +1119,14 @@ body {
 .distribution__form button {
     margin-bottom: 16px;
     display: block;
+}
+
+.distribution__form-check {
+    display: none;
+}
+
+.distribution__form-check--visible {
+    display: inline-block;
 }
 
 .distribution .container {
@@ -1170,8 +1292,8 @@ body {
 }
 
 .distribution__form-bottom span:nth-child(1) {
-    width: 14px;
-    height: 14px;
+    width: 15px;
+    height: 15px;
     margin-right: 8px;
     border: 1px solid #fff;
     cursor: pointer;
@@ -1279,6 +1401,18 @@ body {
 		);
 }
 
+.be-author__file--active .be-author__plus {
+    border: 1px solid #46f4db;
+}
+
+.be-author__file--active .be-author__plus svg path {
+    fill: #46f4db;
+}
+
+.be-author__file p {
+    padding: 0px 10px;
+}
+
 .be-author__column-center {
     width: 100%;
     height: 100%;
@@ -1296,6 +1430,7 @@ body {
     border-radius: 100px;
     background: #fff;
     margin-bottom: 16px;
+    border: 1px solid transparent;
 }
 
 .top-sell {
@@ -1609,6 +1744,10 @@ body {
     .footer__top-right li {
         margin-right: 10px;
     }
+}
+
+.footer__top-right li a:hover {
+    color: #95959d;
 }
 
 .footer__bottom {
