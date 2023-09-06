@@ -38,4 +38,4 @@ const auctionTimer = () => {
 	}, 1000)
 }
 
-export default auctionTimer
+module.exports = auctionTimer

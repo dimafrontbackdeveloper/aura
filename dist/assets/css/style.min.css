@@ -1807,10 +1807,10 @@ body {
     margin-bottom: 32px;
   }
 }
-.be-author__file--active .be-author__plus {
+.be-author__file--active .be-author__plus, .be-author__file:hover .be-author__plus {
   border: 1px solid #46f4db;
 }
-.be-author__file--active .be-author__plus svg path {
+.be-author__file--active .be-author__plus svg path, .be-author__file:hover .be-author__plus svg path {
   fill: #46f4db;
 }
 .be-author__file p {

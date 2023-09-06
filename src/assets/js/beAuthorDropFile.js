@@ -41,4 +41,4 @@ const beAuthorDropFile = () => {
 	})
 }
 
-export default beAuthorDropFile
+module.exports = beAuthorDropFile

@@ -11,6 +11,12 @@ body {
     color: #07060b;
 }
 
+@media (min-width: 1921px) {
+    body {
+        font-size: 20px;
+    }
+}
+
 * {
     transition: all 0.25s ease;
   /* Замените 0.3s и ease на ваши значения */
@@ -100,8 +106,22 @@ body {
 		);
 }
 
+@media (min-width: 1921px) {
+    .logo {
+        max-width: 100px;
+    }
+}
+
 .swiper-container {
     overflow: hidden;
+}
+
+.scroll-disabled {
+    overflow: hidden;
+}
+
+.zIndex-1 {
+    z-index: -1 !important;
 }
 
 .text-cut-wrapper {
@@ -130,6 +150,12 @@ body {
     font-weight: 700;
     line-height: normal;
     cursor: pointer;
+}
+
+@media (min-width: 1921px) {
+    .btn {
+        font-size: 20px;
+    }
 }
 
 .btn1 {
@@ -199,8 +225,20 @@ body {
 		);
 }
 
+@media (min-width: 1921px) {
+    .title {
+        font-size: 60px;
+    }
+}
+
 .section {
     margin-top: calc(
 			60px + 30 * ((100vw - 320px) / 1600)
 		);
+}
+
+@media (min-width: 1921px) {
+    .section {
+        margin-top: 90px;
+    }
 }

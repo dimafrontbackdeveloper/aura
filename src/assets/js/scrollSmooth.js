@@ -22,4 +22,4 @@ const smoothScrollAnimation = () => {
 	})
 }
 
-export default smoothScrollAnimation
+module.exports = smoothScrollAnimation

@@ -1036,7 +1036,8 @@
 		@include adaptiv-value('margin-bottom', 32, 16, 0);
 		cursor: pointer;
 
-		&--active {
+		&--active,
+		&:hover {
 			.be-author__plus {
 				border: 1px solid $primary;
 

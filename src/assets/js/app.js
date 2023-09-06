@@ -1,11 +1,11 @@
-import allocateNavigation from './allocateNavigation.js'
-import anotherAuctionsShowAllColumns from './anotherAuctionsShowAllColumns.js'
-import auctionTimer from './auctionTimer.js'
-import beAuthorDropFile from './beAuthorDropFile.js'
-import distributionCheck from './distributionCheck.js'
-import newStickersSlider from './newStickersSlider.js'
-import preloader from './preloader.js'
-import smoothScroll from './scrollSmooth.js'
+const allocateNavigation = require('./allocateNavigation.js')
+const anotherAuctionsShowAllColumns = require('./anotherAuctionsShowAllColumns.js')
+const auctionTimer = require('./auctionTimer.js')
+const beAuthorDropFile = require('./beAuthorDropFile.js')
+const distributionCheck = require('./distributionCheck.js')
+const newStickersSlider = require('./newStickersSlider.js')
+const preloader = require('./preloader.js')
+const smoothScroll = require('./scrollSmooth.js')
 
 preloader()
 smoothScroll()

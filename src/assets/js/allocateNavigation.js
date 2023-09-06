@@ -1,4 +1,4 @@
-const allocateNavigation = () => {
+const allocateNavigationAnimation = () => {
 	// header allocate navigation on achieve a section
 	const headerNavigationItemsDesktop = document.querySelectorAll(
 		'.header__navigation-item-desktop'
@@ -79,4 +79,4 @@ const allocateNavigation = () => {
 	window.addEventListener('scroll', allocateNavigation)
 }
 
-export default allocateNavigation
+module.exports = allocateNavigationAnimation

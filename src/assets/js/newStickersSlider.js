@@ -30,4 +30,4 @@ newStickersSlider = () => {
 	})
 }
 
-export default newStickersSlider
+module.exports = newStickersSlider

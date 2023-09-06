@@ -31,4 +31,4 @@ const anotherAuctionsShowAllColumns = () => {
 	})
 }
 
-export default anotherAuctionsShowAllColumns
+module.exports = anotherAuctionsShowAllColumns

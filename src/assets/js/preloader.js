@@ -11,4 +11,4 @@ const preloader = () => {
 	}, 2000)
 }
 
-export default preloader
+module.exports = preloader

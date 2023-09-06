@@ -28,4 +28,4 @@ const distributionCheck = () => {
 	)
 }
 
-export default distributionCheck
+module.exports = distributionCheck
